@@ -1,0 +1,492 @@
+{% extends 'shop/basic.html' %}
+{% block title %} Shop Index {% endblock %}
+{% block css %}
+    
+
+    *{
+      margin:0
+      padding:0;
+    }
+    body{
+      font-family: Baloo;
+    }
+    
+    .animation-area{
+      background: linear-gradient(to left, #F2131B,#F2C513);
+      width:100%;
+      height: 65vh;
+    }
+    .box-area{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .box-area li{
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 25px;
+      height: 25px;
+      background: rgba(255,255,255,0.7);
+      animation: animate 12s linear infinite;
+      bottom: -150px;
+    }
+    .box-area li:nth-child(1){
+      left: 86%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+    }
+    .box-area li:nth-child(2){
+      left: 12%;
+      width: 30px;
+      height: 30px;
+      animation-delay: 1.5s;
+      animation-duration: 7s;
+    }
+    .box-area li:nth-child(3){
+      left: 70%;
+      width: 100px;
+      height: 100px;
+      animation-delay: 4.5s;
+    }
+    .box-area li:nth-child(4){
+      left: 42%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 10s;
+    }
+    .box-area li:nth-child(5){
+      left: 65%;
+      width: 40px;
+      height: 40px;
+      animation-delay: 1s;
+    }
+    .box-area li:nth-child(4){
+      left: 15%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+    }
+    @keyframes animate{
+      0%{
+        transform: translateY(0)rotate(0deg);
+        opacity: 1;
+      }
+      100%{
+        transform: translateY(-800px)rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+
+
+          .col-md-3
+          {
+            display: inline-block;
+            margin-left:-4px;
+          }
+          .carousel-indicators .active
+          {
+                background-color: blue;
+          }
+          .col-md-5 img
+          {
+            width: 140px;
+            height: 22px;
+          }
+          
+          a 
+          {
+            color: #000000;
+            text-decoration: none;
+            background-color: transparent;
+          }
+          a:hover
+          {  
+            color: #f65b5f;
+            text-decoration: none;
+            line-height: inherit;
+           cursor: pointer;
+          }
+          
+
+          body .carousel-indicator li
+          {
+            background-color: blue;
+          }
+
+          body.carousel-indicator
+          {
+            bottom:0;
+          }
+
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon
+          {
+            background-color: blue;
+          }
+          .carousel-control-prev,
+          .carousel-control-next
+          {
+            top: auto;
+            bottom: auto;
+            padding-top: 220px;
+          }
+          body.no-padding
+          {
+            padding-left:0,
+            padding-right:0;
+          }
+
+
+
+
+
+          footer.footer-section {
+    background: rgba(0, 0, 0, 0) url("https://www.desktopbackground.org/p/2012/06/23/410280_website-design-background-png_1920x1080_h.png") no-repeat scroll left top / cover;
+    padding: 60px 0 50px;
+}
+.bg-with-black {
+    position: relative;
+}
+.footer-top-section {
+    margin: 0 0 47px;
+}
+.single-fta > img {
+    margin: 0 0 7px;
+}
+.single-fta ul.fta-list {
+    list-style: outside none none;
+    padding-left: 0;
+}
+.single-fta ul.fta-list li, .single-fta ul.fta-list li a {
+    color: #e5e5e5;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 36px;
+}
+.single-fta ul.fta-list {
+    list-style: outside none none;
+    padding-left: 0;
+}
+.fta-title {
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin: 0 0 20px;
+}
+
+.fba-links {
+    text-align: right;
+}
+
+.fba-links ul li a {
+    color: #e5e5e5;
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+.fba-links ul {
+    list-style: outside none none;
+    padding: 0;
+}
+.fba-links ul li {
+    display: inline-block;
+    margin-left: 28px;
+}
+.fba p {
+    color: #aaaaaa;
+    line-height: 30px;
+}
+
+    {% endblock %}
+{% block body %}
+  {% load static %}
+  <div class="animation-area">
+     
+  <!--   ,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,-->
+   
+<div class="container"> 
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <button type="button" class="btn btn-light"><</button>
+          
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <button type="button" class="btn btn-light">></button>
+          
+        </a>
+    <div class="carousel-inner">
+          <div class="carousel-item active my-3">
+            <img src="{% static 'shop/f1.jpg'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item my-3">
+            <img src="{% static 'shop/f2.jpg'%}"  class="d-block w-100" alt="Loging...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="carousel-item my-3">
+            <img src="{% static 'shop/f4.jpg'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </div>
+      </div>
+       
+  </div>
+ </div>
+
+      <ul class="box-area my-3">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+</div>
+
+  <!--   ,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,-->
+
+<!-- sjkbahrgkhsiuogiartgiojo                                                             -->
+
+
+
+
+
+
+
+<div class="container">
+   <!-- slideshow starts here......-->
+    {% for product, range, nslides in allprods %}
+    <h4 class="my-2">Best Sell Best Product: {{product.0.category }} </h4>
+    <div class="row">
+      <div id="demo{{forloop.counter}}" class="col carousel slide my-3" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+          {% for i in range%}
+          <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}" ></li>
+          {% endfor %}
+        </ul>
+
+      <div class = "container carousel-inner no-pedding">
+         <div class="carousel-item active">
+
+           {% for i in product %}
+           <div class="col-xs-3 col-sm-3 col-md-3 ">
+               <div class="card align-item-center" style="width: 16rem;">
+                    <a href="/shop/prodview/{{i.id}}">
+                    <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+                    <div class="card-body ">
+                    <h5 class="card-title" id="namePr{{i.id}}">{{i.product_name}}</h5>
+                    <p class="card-text">{{i.desc|slice:"0:38"}}...</p></a>
+                    <span id="divPr{{i.id}}" class="divPr">
+                    <button id="Pr{{i.id}}" class="btn btn-primary cart my-1">Add to Cart</button>
+                    </span>
+                    <a href="/shop/contact/{{i.id}}">
+                    <button id="qr{{i.id}}" class="btn btn-primary cart my-1 ">Bay</button></a>
+                    </div>
+                </div>
+            </div>
+           {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last%}
+          </div>
+          <div class="carousel-item">
+           {% endif %}
+           {% endfor %}
+          </div>
+      </div>
+    </div>                <!-- Left and right controls silde'r -->
+
+             <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+                 <button type="button" class="btn btn-light"><</button>
+             </a>
+             <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+                 <button type="button" class="btn btn-light">></button>
+             </a>
+  </div>
+    {% endfor %}
+</div>
+
+<footer class="footer-section bg-with-black">
+        <div class="footer-top-section">
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <img src="https://source.unsplash.com/160x60/?The India"  alt="...">
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <h3 class="fta-title">Important Link</h3>
+                            <ul class="fta-list">
+                                <li><a href="#"><i class="fa fa-square"></i>Finacial Planning</a></li>
+                                <li><a href="#"><i class="fa fa-square"></i>Investments Management</a></li>
+                                <li><a href="#"><i class="fa fa-square"></i>Taxes Planning</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <h3 class="fta-title">Important Link</h3>
+                            <ul class="fta-list">
+                                <li><a href="#"><i class="fa fa-square"></i>Finacial Planning</a></li>
+                                <li><a href="#"><i class="fa fa-square"></i>Investments Management</a></li>
+                                <li><a href="#"><i class="fa fa-square"></i>Taxes Planning</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <h3 class="fta-title">Contact Us</h3>
+                            <ul class="fta-list">
+                                <li>Address: 8th floor, 379 Hudson St, New York, NY 10018</li>
+                                <li>Phone: (+1) 96 716 6879</li>
+                                <li>Email: contact@site.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="footer-bottom">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="fba">
+                                        <p><b>2020 Presented By v!p_aRt.</b></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-sm-12 col-xs-12 ">
+                                    <div class="fba-links">
+                                        <ul>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="#">Term & Conditions</a></li>
+                                            <li><a href="#">Privacy Policy</a></li>
+                                            <li><a href="#">Sites Map</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+{% endblock %}
+<!--   javascript  -->
+{% block js %}
+<script>
+
+    if(localStorage.getItem('cart') == null)
+    {
+        var cart={};
+    }
+
+    else
+    {
+     cart= JSON.parse(localStorage.getItem('cart'));
+      updateCart(cart);  
+    }
+//jQuery starts here//
+$('.cart').click(function(){
+var idstr= this.id.toString();
+if ( cart[idstr]  != undefined )
+{
+    cart[idstr] = cart[idstr]+1;
+}
+else
+{
+    cart[idstr]  = 1;
+}
+updateCart(cart);
+});
+$('#popcart').popover();
+
+
+updatepopover(cart);
+function updatepopover(cart) {
+  console.log("inside popover");
+  var popstr ="";
+  popstr =popstr + "<h5>Cart Firstone</h5><div class='mx-2 my-1'> ";
+  var i = 1;
+  for(var item in cart){
+    popstr= popstr +"<b>"+ i +". </b>";
+    console.log(item);
+    popstr= popstr +  document.getElementById('name'+item).innerHTML.slice(0, 19) + "... Qty: " + cart[item] + '<br>';
+    i=i+1;
+  }
+  popstr= popstr+"</div> <button type='button' class='btn btn-dark'>Dark</button>";
+console.log(popstr);
+document.getElementById('popcart').setAttribute('data-content',popstr);
+  $('#popcart').popover('show');
+}
+
+function clearcart(){
+  cart=JSON.parse(localStorage.getItem('cart'));
+  for (var item in cart){
+    document.getElementById('div'+item).innerHTML='<button id="'+item+'" class="btn btn-primary cart ">Add to Cart</button>'
+  }
+  localStorage.clear('cart');
+  cart ={};
+  updateCart(cart);
+}
+function updateCart(cart) {
+  var sum=0;
+    for (var item in cart) {
+        sum =sum+cart[item];
+            document.getElementById('div' + item).innerHTML = "<button id='minus" + item + "' class='btn btn-primary minus'>-</button> <span id='Val" + item + "''>" + cart[item] + "</span> <button id='plus" + item + "' class='btn btn-primary plus'> + </button>";
+    }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+    document.getElementById('cart').innerHTML = sum;
+    console.log(cart);
+  updatepopover(cart);
+}
+// If plus or minus button is clicked, change the cart as well as the display value
+$('.divPr').on("click","button.minus",function(){
+  a=this.id.slice(7, );
+  cart['Pr'+a] = cart['Pr'+a]-1
+  cart['Pr'+a] = Math.max(0,cart['Pr'+a]);
+  document.getElementById('ValPr'+a).innerHTML = cart['Pr'+a];
+  updateCart(cart);
+});
+
+$('.divPr').on("click","button.plus",function(){
+  a=this.id.slice(6, );
+  cart['Pr'+a] = cart['Pr'+a]+1
+  document.getElementById('ValPr'+a).innerHTML = cart['Pr'+a];
+  updateCart(cart);
+});
+
+</script>
+{% endblock %}
+

@@ -1,0 +1,99 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} Contact Us {% endblock %}
+{% block body %}
+<div class="container my-4">
+    <h1> Contact Us</h1>
+    <form action="/shop/contact/" method="post">{% csrf_token %}
+
+        <div class="form-group mx-5 my-2">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+  </div>
+
+  <div class="form-row mx-5">
+    <div class="col-md-6 mb-3 ">
+      <label for="name">Full name</label>
+      <input type="text" class="form-control" id="name" name="name" value="Mark" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="call">Phone</label>
+      <input type="tel" class="form-control" id="call" name="call" value="Active Phone number" required>
+    </div>
+  </div>
+  <div class="form-row mx-5">
+    <div class="col-md-6 mb-3">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" name="city" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="state">State</label>
+      <select class="custom-select" id="state" name="state" required>
+        <option selected disabled value="">Only IN MP.</option>
+            <option>1   Agar Malwa</option>
+            <option>2	Alirajpur</option>
+            <option>3	Anuppur</option>
+            <option>4	Ashoknagar</option>
+            <option>5	Balaghat</option>
+            <option>6	Barwan</option>
+            <option>7	Betul</option>
+            <option>8	Bhind</option>
+            <option>9	Bhopal</option>
+            <option>10	Burhanpur</option>
+            <option>11	Chhatarpur</option>
+            <option>12	Chhindwara</option>
+            <option>13	Damoh</option>
+            <option>14	Datia</option>
+            <option>15	Dewas</option>
+            <option>16	Dhar</option>
+            <option>17	Dindori</option>
+            <option>18	East Nimar</option>
+            <option>19	Guna</option>
+            <option>20	Gwalior</option>
+            <option>21	Harda</option>
+            <option>22	Hoshangabad</option>
+            <option>23	Indore</option>
+            <option>24  Jabalpur</option>
+            <option>25	Jhabua</option>
+            <option>26	Katni</option>
+            <option>27	Mandla</option>
+            <option>28	Mandsaur</option>
+            <option>29	Morena</option>
+            <option>30	Narsinghpur</option>
+            <option>31	Neemuch</option>
+            <option>32	Niwari</option>
+            <option>33	Panna</option>
+            <option>34	Raisen</option>
+            <option>35	Rajgarh</option>
+            <option>36	Ratlam</option>
+            <option>37	Rewa</option>
+            <option>38	Sagar</option>
+            <option>39	Satna</option>
+            <option>40	Sehore</option>
+            <option>41	Seoni</option>
+            <option>42	Shahdol</option>
+            <option>43	Shajapur</option>
+            <option>44	Sheopur</option>
+            <option>45	Shivpuri</option>
+            <option>46	Sidhi</option>
+            <option>47	Singrauli</option>
+            <option>48	Tikamgarh</option>
+            <option>49	Ujjain</option>
+            <option>50	Umaria</option>
+            <option>51	Vidisha</option>
+            <option>52	West Nimar</option>
+      </select>
+    </div>
+    <div class="col-md-3 mb-3 ">
+      <label for="zip">Zip</label>
+      <input type="text" class="form-control" id="zip" name="zip" required>
+    </div>
+  </div>
+   <div class="form-group mx-5 ">
+    <label for="desc">You'r Feedback</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+  <button class="btn btn-primary mx-5" type="submit">Submit.</button>
+</form>
+</div>
+    {% endblock %}
